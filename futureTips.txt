@@ -1,0 +1,28 @@
+BROKEN CODE:
+
+PassTypes currently doesn't resolve scopes perfectly.
+	Ex: A parameter is declared in one function definition.
+	    Another parameter WITH THE SAME NAME is declared in another func def.
+   - PassTypes uses table->lookup to find the param's def and store that def's members in the IdK that was looked up
+     This is a problem because PassTypes travels bottom up, so the lowest func's param def will get found by table->
+     lookup. This info will then get store in that calling idK. What if that calling IdK was in the hicher func's
+     scope. Well now, that IdK is storing the lower func's param def data, which is incorrect.
+	- Temp shortcut was used on 1277 in semantics.cpp. This resolution is not correct, but allows me to skid by.
+
+
+Memory Management is absolutely trash
+
+Not printing "static" when it should, problem found in HW6 testing
+
+
+
+
+Things to do for HW6:
+  - (FIXED) Calls may have deeply nested children args. need to convert this to a traverseChildS() strategy to catch them all 
+      - (NOT FIXED: but requires same solution as calls. Use traverseChilds()). this is the case for NESTED for loops as well. Needs to catch multiple nested loops and doesnt currently
+      --POTENTIAL SOLUTION: use traverseChilds() to traverse through eveything
+          - this worked for the calls problem
+
+  - ALong with nested fors, check other nested things like nested compounds.
+
+
