@@ -1,6 +1,6 @@
 # compiler
 
-## DISCLAIMER
+## Disclaimer
 
 * This is C/C++ written by myself when I was in school. There will be lots of mistakes, horrible code structure, and plenty of memory leaks. I wouldnt be surprised if the first thing you see is a seg fault when you run it. This code is here to offer general knowledge of what a compiler consists of and how
 one might build one. Following the HW specs, you could build one yourself.
