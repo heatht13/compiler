@@ -1,0 +1,11 @@
+                            /*temp = scopedNode->child[0];
+                            codeGen(temp->child[1], table);
+                            emitRM((char *)"ST", 3, toffset, 1, (char *)"push index");
+                            emitComment((char *)"TOFF dec:", --toffset);
+                            codeGen(scopedNode->child[1], table);
+                            emitComment((char *)"TOFF inc:", ++toffset);
+                            emitRM((char *)"LD", 4, toffset, 1, (char *)"pop index");
+                            emitRM((char *)"LDA", 5, temp->child[0]->offset, 1, (char *)"load address of base of array", temp->child[0]->attr.name);
+                            emitRO((char *)"SUB", 5, 5, 4, (char *)"Compute offset of value");
+                            emitRM((char *)"ST", 3, 0, 5, (char *)"Store variable", temp->child[0]->attr.name);*/
+
